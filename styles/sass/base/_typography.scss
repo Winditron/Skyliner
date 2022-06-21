@@ -1,0 +1,34 @@
+/* font families */
+$font-family-heading: 'Syncopate', sans-serif;
+$font-family-text:"Mukta", sans-serif;
+/* font colors */
+$font-color-text:#EEEEEE;
+$font-color-heading:#F0F0F0;
+/* font sizes */
+$font-heading-sizes: (36px, 32px, 28px, 24px, 18px);
+$font-text-size:12px;
+$font-text-size-small:11px;
+/* line heights */
+$line-height-heading: (37px, 33px, 29px, 25px, 24px);
+$line-height-text:20px;
+$line-height-text-small:18px;
+
+*{
+    font-family:$font-family-text;
+    color:$font-color-text;
+    line-height: $line-height-text;
+    font-size:$font-text-size;
+}
+
+h1,h2,h3,h4,h5 {
+    
+    color:  $font-color-heading;
+}
+
+@for $i from 1 through 5 {
+	h#{$i} {
+	font-family:    $font-family-heading;
+    font-size:      nth($font-heading-sizes, $i);
+    line-height:    nth($line-height-heading, $i);
+	}
+}
