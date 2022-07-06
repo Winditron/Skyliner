@@ -1,0 +1,13 @@
+/*base style*/
+.btn {
+  // font-family: $btn-font-family;
+  font-size: 0.813rem;
+  line-height: 0.625rem;
+}
+
+/*outline Buttons */
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    box-shadow: 0px 0px 4px $value, inset 0px 0px 5px $value;
+  }
+}

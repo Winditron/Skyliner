@@ -1,8 +1,14 @@
+import Layout from "../components/layouts/Layout";
+/*Stylesheets */
 import "../styles/sass/main.scss";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "aos/dist/aos.css";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  );
 }
 
 export default MyApp;

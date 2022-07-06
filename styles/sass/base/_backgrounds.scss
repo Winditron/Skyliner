@@ -1,0 +1,31 @@
+@each $bg, $filename in $bg-pictures {
+  .bg-#{$bg} {
+    background: {
+      image: url($bg-basepath + $filename);
+      position: center;
+      size: cover;
+      repeat: no-repeat;
+    }
+    @each $gradient, $value in $bg-gradients {
+      &-gradient-#{$gradient} {
+        background: {
+          image: $value, url($bg-basepath + $filename);
+          position: center;
+          size: cover;
+          repeat: no-repeat;
+        }
+      }
+    }
+    @each $color, $value in $theme-colors {
+      &-#{$color} {
+        background: {
+          image: linear-gradient(rgba($value, 50%), rgba($value, 50%)),
+            url($bg-basepath + $filename);
+          position: center;
+          size: cover;
+          repeat: no-repeat;
+        }
+      }
+    }
+  }
+} ;

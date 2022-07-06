@@ -1,0 +1,30 @@
+.navbar {
+  .navbar-toggler {
+    border: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:focus {
+      text-decoration: none;
+      outline: 0;
+    }
+  }
+}
+
+@media screen and (max-width: map-get($grid-breakpoints, "lg")) {
+  .offcanvas {
+    background: $blue-purple-gradiant-top-right;
+    opacity: 95%;
+
+    &-body {
+      .nav-link {
+        font-size: $navbar-offcanvas-font-size;
+        .btn {
+          font-size: $navbar-offcanvas-font-size;
+        }
+      }
+    }
+  }
+}

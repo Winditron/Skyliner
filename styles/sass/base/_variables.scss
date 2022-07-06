@@ -1,0 +1,117 @@
+/*color gradiants */
+$blue-purple-gradiant-top-right: linear-gradient(
+  53.3deg,
+  #120078 16.73%,
+  #640187 48.82%,
+  #9d0191 86.76%
+);
+$blue-purple-gradiant-top: linear-gradient(
+  0deg,
+  #120078 0%,
+  #640187 66.59%,
+  #9d0191 100%
+);
+
+/* Fonts */
+/* font colors */
+$body-color: #eeeeee;
+$font-color-heading: #f0f0f0;
+$nav-link-color: #f0f0f0;
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: "Mukta", "Syncopate", system-ui, -apple-system,
+  "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial,
+  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+  "Noto Color Emoji";
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+  "Liberation Mono", "Courier New", monospace;
+
+$font-size-root: null;
+$font-size-base: 0.688rem; // Assumes the browser default, typically `16px`
+$font-size-sm: $font-size-base;
+$font-size-lg: $font-size-base;
+
+$font-family-heading: "Syncopate", sans-serif;
+$h1-font-size: $font-size-base * 3.3;
+$h2-font-size: $font-size-base * 3;
+$h3-font-size: $font-size-base * 2.5;
+$h4-font-size: $font-size-base * 2.2;
+$h5-font-size: $font-size-base * 1.6;
+$h6-font-size: $font-size-base;
+
+/* bootstrap color */
+$theme-colors: (
+  "dark-blue": #120078,
+  "purple": #640187,
+  "light-purple": #9d0191,
+  "light-red": #fd3a69,
+  "yellow": #fecd1a,
+);
+
+$body-bg: #120078;
+
+// Background images
+$bg-basepath: "/images/backgrounds/";
+
+$bg-pictures: (
+  1: "1.jpg",
+  2: "2.jpg",
+  3: "3.jpg",
+  4: "4.jpg",
+  5: "5.jpg",
+  6: "6.jpg",
+  7: "7.jpg",
+);
+
+$bg-gradients: (
+  1:
+    linear-gradient(
+      0deg,
+      rgba(18, 0, 122, 0.75) 0%,
+      rgba(101, 1, 137, 0.75) 66.59%,
+      rgba(157, 1, 144, 0.75) 100%
+    ),
+  2:
+    linear-gradient(
+      53.3deg,
+      hsla(249, 100%, 24%, 0.75) 16.73%,
+      hsla(284, 99%, 27%, 0.75) 48.82%,
+      hsla(305, 99%, 31%, 0.75) 86.76%
+    ),
+);
+
+/*Navbar*/
+
+$navbar-dark-toggler-icon-bg: url(/images/icons/burger.svg);
+$navbar-toggler-padding-y: 0.25rem !default;
+$navbar-toggler-padding-x: 0.75rem !default;
+$navbar-toggler-border-radius: 0;
+$navbar-toggler-focus-width: 0;
+$navbar-toggler-transition: box-shadow 0.15s ease-in-out !default;
+$navbar-offcanvas-font-size: 2.5rem;
+
+/* Cards */
+
+$card-border-color: rgba(255, 255, 255, 0.3);
+$card-border-radius: 32px;
+
+/* spacing */
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4,
+  7: $spacer * 5,
+  8: $spacer * 6,
+  9: $spacer * 7,
+  10: $spacer * 8,
+  11: $spacer * 9,
+  12: $spacer * 10,
+  13: $spacer * 11,
+  14: $spacer * 12,
+  15: $spacer * 13,
+);

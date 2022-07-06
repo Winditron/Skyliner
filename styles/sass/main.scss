@@ -1,3 +1,20 @@
+/*Base*/
+@import "base/fonts";
+@import "base/variables";
+@import "base/utilities";
+@import "base/typography";
+@import "base/backgrounds";
+
+/* Vendor  - Stylesheets from external sources */
+@import "vendor/bootstrap";
+
+/* Components */
+@import "components/navigation";
+@import "components/footer";
+@import "components/button";
+@import "components/heroSection";
+@import "components/carousel";
+@import "components/cards";
+@import "components/timeline";
 
 
-@import "base/global.scss";

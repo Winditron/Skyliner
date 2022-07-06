@@ -1,0 +1,37 @@
+.timeline {
+  &-item {
+    display: flex;
+    .timeline-line {
+      width: 150px;
+      .line {
+        width: 3px;
+        height: 100%;
+        margin: 0 auto;
+        display: block;
+        background-color: map-get($theme-colors, "light-red");
+        position: relative;
+        box-shadow: 0px 0px 10px map-get($theme-colors, "light-red");
+        border-radius: 5px;
+
+        &:before {
+          content: "";
+          display: block;
+          background-color: map-get($theme-colors, "dark-blue");
+          border-radius: 50%;
+          position: absolute;
+          top: 0;
+          transform: translateX(-50%);
+          left: 1px;
+          height: 32px;
+          width: 32px;
+          border: 2px solid #9d0191;
+          box-shadow: 0px 0px 30px #9d0191, inset 0px 0px 20px #9d0191;
+        }
+      }
+    }
+    &-content {
+      margin: 5px 0;
+      width: 100%;
+    }
+  }
+}

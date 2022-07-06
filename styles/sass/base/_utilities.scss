@@ -1,0 +1,70 @@
+$utilities: (
+
+/* width & height*/
+  "width": (
+    property: width,
+    class: w,
+    responsive: true,
+    values: (
+      25: 25%,
+      50: 50%,
+      75: 75%,
+      100: 100%,
+      auto: auto,
+      250: 250px,
+      255: 255px,
+      320: 320px,
+    ),
+  ),
+  "max-width": (
+    property: max-width,
+    responsive: true,
+    class: mw,
+    values: (
+      100: 100%,
+      320: 320px,
+      255: 255px,
+      600p: 600px,
+    ),
+  ),
+  "height": (
+    property: height,
+    class: h,
+    responsive: true,
+    values: (
+      25: 25%,
+      50: 50%,
+      75: 75%,
+      100: 100%,
+      auto: auto,
+      40:40px,
+      50p:50px,
+      250: 250px,
+      320: 320px,
+      255: 255px,
+    ),
+  ),
+  "max-height": (
+    property: max-height,
+    responsive: true,
+    class: mw,
+    values: (
+      100: 100%,
+      320: 320px,
+      255: 255px,
+    ),
+  ),
+
+  /*text*/
+  "text-align": (
+    responsive: true,
+    property: text-align,
+    class: text,
+    values: (
+      start: left,
+      end: right,
+      center: center,
+      justify:justify
+    )
+  ),
+);
