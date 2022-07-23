@@ -1,6 +1,7 @@
-import { Container, Card, Badge, Form } from "react-bootstrap";
+import { Container } from "react-bootstrap";
+import TimelineItem from "./TimelineItem";
 
-export default function Timeline({ className }) {
+export default function Timeline({ className, articles }) {
   return (
     <section className={`devlog-timeline ${className} p-7`}>
       <Container>
@@ -15,35 +16,16 @@ export default function Timeline({ className }) {
           <option value="3">Three</option>
         </Form.Select> */}
         <div className="timeline">
-          <div className="timeline-item">
-            <div class="timeline-line">
-              <div className="line"></div>
-            </div>
-            <div className="timeline-item-content">
-              <h4 className="px-4">21.2.2022</h4>
-              <Card className=" p-0">
-                <Card.Body className="p-0">
-                  <Card.Header className="d-flex justify-content-between align-items-center">
-                    <h3>Mechaniken</h3>
-                    <div>
-                      <Badge pill bg="purple">
-                        Web Design
-                      </Badge>
-                    </div>
-                  </Card.Header>
-                  <Card.Text className="p-5 mw-600p mx-auto">
-                    Begonnen hat die Sliding Mechanik mit der Suche einer
-                    passenden Animation auf Mixamo (https://www.mixamo.com/#/).
-                    Daraufhin wurde diese durch ein Programm (Mixamo Converter –
-                    Terriblis Studio: https://terribilisstudio.fr/?section=MC)
-                    auf das Skelett des Unreal Engine 4 Charakters gebaked.
-                    Durch dieses Baken konnte die Sliding Animation ohne
-                    Probleme im Projekt verwendet werden.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-          </div>
+          {articles?.map((article) => (
+            <TimelineItem
+              key={article.title}
+              category={article.category}
+              title={article.title}
+              date={article.createdAt}
+            >
+              {article.content}
+            </TimelineItem>
+          ))}
         </div>
       </Container>
     </section>

@@ -6,7 +6,9 @@ import Navigation from "../base/Navigation";
 export default function Layout({ children }) {
   return (
     <>
-      <Head></Head>
+      <Head>
+        <title>Skyliner</title>
+      </Head>
       <header>
         <Navigation />
       </header>
