@@ -3,6 +3,7 @@ import Article from "../../../models/Article";
 import Articlelist from "../../../components/admin/article/Articlelist";
 import { Container } from "react-bootstrap";
 import ArticleActionBar from "../../../components/admin/article/ArticleActionBar";
+import ErrorAndSuccess from "../../../components/ErrorAndSuccess";
 
 export default function index({ articles }) {
   return (
@@ -10,6 +11,7 @@ export default function index({ articles }) {
       <section className="bg-5-gradient-2">
         <Container className=" d-flex justify-content-center align-items-center vh-100 ">
           <div className="d-block w-100">
+            <ErrorAndSuccess />
             <h1>Artikel</h1>
             <ArticleActionBar className="py-3" />
             <Articlelist articles={articles} />

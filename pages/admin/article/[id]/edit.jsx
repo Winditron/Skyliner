@@ -123,7 +123,6 @@ export async function getServerSideProps(context) {
   const id = context.params.id;
   await mongodb.dbConnect();
   const article = await Article.findById(id).lean();
-  console.log(article);
   return {
     props: {
       article: JSON.parse(JSON.stringify(article)),

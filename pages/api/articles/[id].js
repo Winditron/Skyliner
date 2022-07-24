@@ -2,6 +2,7 @@ import mongodb from "../../../utils/mongodb";
 import Article from "../../../models/Article";
 import { object, string } from "yup";
 import yupErrorFormatter from "../../../helpers/yupErrorFormatter";
+import AuthService from "../../../services/AuthService";
 
 export default async function handler(req, res) {
   const {
@@ -9,6 +10,7 @@ export default async function handler(req, res) {
     query: { id },
   } = req;
   await mongodb.dbConnect();
+  await AuthService.apiMustLoggedIn(req, res);
 
   if (method === "PUT") {
     let validationSchema = object({

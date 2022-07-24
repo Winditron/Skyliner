@@ -1,6 +1,7 @@
 import mongodb from "../../../utils/mongodb";
 import Article from "../../../models/Article";
 import yupErrorFormatter from "../../../helpers/yupErrorFormatter";
+import AuthService from "../../../services/AuthService";
 import { object, string } from "yup";
 
 export default async function handler(req, res) {
@@ -11,7 +12,7 @@ export default async function handler(req, res) {
     try {
       const articles = await Article.find();
       if (articles) {
-        res.status(200).json(article);
+        res.status(200).json(articles);
       } else {
         res
           .status(400)
@@ -23,6 +24,7 @@ export default async function handler(req, res) {
   }
 
   if (method === "POST") {
+    await AuthService.apiMustLoggedIn(req, res);
     let validationSchema = object({
       title: string().trim().min(3).max(50).required(),
       category: string()

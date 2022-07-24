@@ -1,6 +1,8 @@
-import { Nav, Navbar, Container, Offcanvas } from "react-bootstrap";
+import { useSession, signOut } from "next-auth/react";
+import { Nav, Navbar, Container, Offcanvas, Button } from "react-bootstrap";
 
 export default function Navigation() {
+  const { data: session } = useSession();
   return (
     <Navbar expand="lg" variant="dark" bg="purple" fixed="top">
       <Container>
@@ -21,6 +23,16 @@ export default function Navigation() {
             <Nav className=" flex-grow-1 pe-3 text-center h-50 justify-content-around justify-content-lg-end">
               <Nav.Link href="/team">Team</Nav.Link>
               <Nav.Link href="/devlog">Dev-Log</Nav.Link>
+              {session && <Nav.Link href="/admin/article">Artikel</Nav.Link>}
+              {session && (
+                <Button
+                  variant="link"
+                  className="nav-link"
+                  onClick={() => signOut()}
+                >
+                  Logout
+                </Button>
+              )}
               <Nav.Link href="#pricing">
                 <span className="btn btn-outline-yellow">Play Now</span>
               </Nav.Link>
