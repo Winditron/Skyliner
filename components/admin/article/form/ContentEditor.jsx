@@ -17,7 +17,9 @@ export default function ContentEditor(props) {
         textareaName="content"
         {...props}
         init={{
-          plugins: ["image", "autoresize"],
+          plugins: ["image", "autoresize", "media", "wordcount", "autolink"],
+          images_file_types: "jpeg,jpg,jpe,jfi,jif,jfif,png,gif,bmp,webp",
+          images_upload_url: `${config.base.apiURL}articles/add/image`,
           object_resizing: true,
         }}
       />
