@@ -13,10 +13,9 @@ $blue-purple-gradiant-top: linear-gradient(
 );
 
 /* Fonts */
-/* font colors */
-$body-color: #eeeeee;
-$font-color-heading: #f0f0f0;
-$nav-link-color: #f0f0f0;
+
+$nav-link-color: #eeeeee;
+$navbar-dark-color: #eeeeee;
 
 // stylelint-disable value-keyword-case
 $font-family-sans-serif: "Mukta", "Syncopate", system-ui, -apple-system,
@@ -26,17 +25,19 @@ $font-family-sans-serif: "Mukta", "Syncopate", system-ui, -apple-system,
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
   "Liberation Mono", "Courier New", monospace;
 
+$body-color: #eeeeee; // base font color
 $font-size-root: null;
-$font-size-base: 0.688rem; // Assumes the browser default, typically `16px`
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
 $font-size-sm: $font-size-base;
 $font-size-lg: $font-size-base;
 
-$font-family-heading: "Syncopate", sans-serif;
-$h1-font-size: $font-size-base * 3.3;
-$h2-font-size: $font-size-base * 3;
-$h3-font-size: $font-size-base * 2.5;
-$h4-font-size: $font-size-base * 2.2;
-$h5-font-size: $font-size-base * 1.6;
+$headings-color: #f0f0f0;
+$headings-font-family: "Syncopate", sans-serif;
+$h1-font-size: $font-size-base * 2.225;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.125;
 $h6-font-size: $font-size-base;
 
 /* bootstrap color */
@@ -47,7 +48,11 @@ $theme-colors: (
   "light-red": #fd3a69,
   "yellow": #fecd1a,
   "danger": #fd3a69,
-  "success": hsl(150, 100%, 35%),
+  "success": #00b359,
+  /*Article Category Color*/ "audio": #4774b5,
+  "art": hsl(29, 69%, 55%),
+  "programming": #db3e40,
+  "web": #6d3eb6,
 );
 
 $body-bg: #120078;

@@ -2,7 +2,8 @@
   &-item {
     display: flex;
     .timeline-line {
-      width: 150px;
+      display: none; // xs - sm not visible
+      width: 25%;
       .line {
         width: 3px;
         height: 100%;
@@ -30,8 +31,47 @@
       }
     }
     &-content {
-      margin: 5px 0;
-      width: 100%;
+      &-container {
+        width: 100%;
+        margin: 5px 0;
+        padding-bottom: 3rem;
+      }
+
+      img {
+        max-width: 600px;
+        width: 100%;
+        object-fit: scale-down;
+      }
+    }
+
+    &:last-child {
+      .timeline-line {
+        .line {
+          background: none;
+          box-shadow: none;
+        }
+      }
+      .timeline-item {
+        &-content {
+          &-container {
+            padding-bottom: 0rem;
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(md) {
+  .timeline {
+    &-item {
+      .timeline-line {
+        display: block;
+      }
+      &-content {
+        &-container {
+          width: 75%;
+        }
+      }
     }
   }
 }

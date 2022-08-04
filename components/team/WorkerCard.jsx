@@ -19,7 +19,7 @@ export default function WorkerCard({ name, email, children, className }) {
       </Card.Title>
       <Card.Body>
         <p className="text-center">{children}</p>
-        <small className="text-center d-block">{email}</small>
+        <small className="text-center d-block text-gray-500">{email}</small>
       </Card.Body>
     </Card>
   );

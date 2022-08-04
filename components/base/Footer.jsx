@@ -33,12 +33,12 @@ export default function Footer() {
             <ul className="p-0 ">
               <li className="border-bottom mb-2">RECHTLICHES</li>
               <li>
-                <Link href="/">
+                <Link href="/legal/privacy">
                   <a>Datenschutz</a>
                 </Link>
               </li>
               <li>
-                <Link href="/impressum">
+                <Link href="/legal/impressum">
                   <a>Impressum</a>
                 </Link>
               </li>

@@ -1,5 +1,5 @@
 import { useSession, signOut } from "next-auth/react";
-import { Nav, Navbar, Container, Offcanvas, Button } from "react-bootstrap";
+import { Nav, Navbar, Container, Offcanvas } from "react-bootstrap";
 
 export default function Navigation() {
   const { data: session } = useSession();
@@ -24,17 +24,11 @@ export default function Navigation() {
               <Nav.Link href="/team">Team</Nav.Link>
               <Nav.Link href="/devlog">Dev-Log</Nav.Link>
               {session && <Nav.Link href="/admin/article">Artikel</Nav.Link>}
-              {session && (
-                <Button
-                  variant="link"
-                  className="nav-link"
-                  onClick={() => signOut()}
-                >
-                  Logout
-                </Button>
-              )}
+              {session && <Nav.Link onClick={() => signOut()}>Logout</Nav.Link>}
               <Nav.Link href="#pricing">
-                <span className="btn btn-outline-yellow">Play Now</span>
+                <span className="btn btn-outline-yellow p-2 d-inline">
+                  PLAY NOW
+                </span>
               </Nav.Link>
             </Nav>
           </Offcanvas.Body>

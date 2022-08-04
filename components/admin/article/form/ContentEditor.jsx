@@ -17,10 +17,21 @@ export default function ContentEditor(props) {
         textareaName="content"
         {...props}
         init={{
-          plugins: ["image", "autoresize", "media", "wordcount", "autolink"],
+          plugins: [
+            "image",
+            "autoresize",
+            "media",
+            "wordcount",
+            "autolink",
+            "lists",
+            "quickbars",
+          ],
+          toolbar:
+            " undo redo | styles | bold italic underline | numlist bullist | image media  ",
           images_file_types: "jpeg,jpg,jpe,jfi,jif,jfif,png,gif,bmp,webp",
+          image_prepend_url: `${config.base.apiURL}articles/images`,
           images_upload_url: `${config.base.apiURL}articles/add/image`,
-          object_resizing: true,
+          object_resizing: false,
         }}
       />
     </div>

@@ -5,6 +5,7 @@ import { useState } from "react";
 import DeleteModal from "./DeleteModal";
 
 import Paginator from "../../Paginator";
+import Category from "../../article/Category";
 
 export default function ArticleList({ className, articles }) {
   //DeleteModal
@@ -28,6 +29,8 @@ export default function ArticleList({ className, articles }) {
     setCurrentPage(page);
   };
 
+  const formatDate = (date) => new Date(date).toLocaleDateString("de-At");
+
   //generate listItems
   const listItems = currentArticles?.map((article, index) => (
     <tr key={article._id}>
@@ -35,8 +38,10 @@ export default function ArticleList({ className, articles }) {
       <td>
         <Link href={`/admin/article/${article._id}/edit`}>{article.title}</Link>
       </td>
-      <td>{article.category}</td>
-      <td>{article.createdAt}</td>
+      <td>
+        <Category category={article.category} />
+      </td>
+      <td>{formatDate(article.createdAt)}</td>
       <td>
         <div className="d-flex ">
           <Link href={`/admin/article/${article._id}/edit`}>
